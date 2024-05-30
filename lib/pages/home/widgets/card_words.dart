@@ -28,10 +28,27 @@ class CardWords extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           color: appColor.secondaryColor,
         ),
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Row(
+              children: [
+                const Spacer(),
+                IconButton(
+                    onPressed: onTap,
+                    icon: isSaved
+                        ? Icon(
+                            Icons.bookmark,
+                            size: 26,
+                            color: appColor.primaryColor,
+                          )
+                        : const Icon(
+                            Icons.bookmark_border_outlined,
+                            size: 26,
+                          )),
+              ],
+            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -44,7 +61,14 @@ class CardWords extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     const Gap(12),
-                    Text(word.turkmen)
+                    Expanded(
+                      child: Text(word.turkmen,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: const TextStyle(
+                            overflow: TextOverflow.ellipsis,
+                          )),
+                    )
                   ],
                 ),
                 const Gap(16),
@@ -57,7 +81,13 @@ class CardWords extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     const Gap(12),
-                    Text(word.english)
+                    Expanded(
+                      child: Text(
+                        word.english,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    )
                   ],
                 ),
                 const Gap(16),
@@ -70,23 +100,17 @@ class CardWords extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     const Gap(12),
-                    Text(word.russion)
+                    Expanded(
+                      child: Text(
+                        word.russion,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
+                    )
                   ],
                 )
               ],
             ),
-            IconButton(
-                onPressed: onTap,
-                icon: isSaved
-                    ? Icon(
-                        Icons.bookmark,
-                        size: 26,
-                        color: appColor.primaryColor,
-                      )
-                    : const Icon(
-                        Icons.bookmark_border_outlined,
-                        size: 26,
-                      ))
           ],
         ));
   }

@@ -1,7 +1,7 @@
 import 'package:dictionary_app/pages/home/home_screen.dart';
 import 'package:dictionary_app/pages/info/info_screen.dart';
 import 'package:dictionary_app/pages/saved/saved_screen.dart';
-import 'package:dictionary_app/pages/search/search_screen.dart';
+
 import 'package:dictionary_app/provider/setting_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

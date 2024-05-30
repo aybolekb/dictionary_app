@@ -1,6 +1,7 @@
 import 'package:dictionary_app/config/theme/theme.dart';
 import 'package:dictionary_app/main_navigations/main_navigation.dart';
 import 'package:dictionary_app/models/words.dart';
+import 'package:dictionary_app/pages/splash/splash_screen.dart';
 import 'package:dictionary_app/provider/repository_provider.dart';
 import 'package:dictionary_app/provider/setting_provider.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ void main() async {
 
   Hive.registerAdapter(WordsAdapter());
   box = await Hive.openBox<Words>('saved');
+
   runApp(const MyApp());
 }
 
@@ -48,7 +50,7 @@ class MyApp extends StatelessWidget {
               darkTheme: AppTheme.darkTheme(),
               themeMode:
                   settingProvider.isDark ? ThemeMode.dark : ThemeMode.light,
-              home: const MainNavigation());
+              home: const SplachScreen());
         });
   }
 }

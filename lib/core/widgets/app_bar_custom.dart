@@ -9,8 +9,7 @@ class AppBarCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final appColor =
-        theme.brightness == Brightness.dark ? DarkColor() : LightColor();
+
     final settingProvider = Provider.of<SettingProvider>(context);
 
     return Container(
