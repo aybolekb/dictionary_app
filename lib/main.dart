@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           final settingProvider = Provider.of<SettingProvider>(context);
 
           return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'Matematiki sözlük',
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme(),
               darkTheme: AppTheme.darkTheme(),

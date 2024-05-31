@@ -1,8 +1,8 @@
 import 'package:dictionary_app/config/theme/theme.dart';
 import 'package:dictionary_app/core/widgets/app_bar_custom.dart';
 import 'package:dictionary_app/main.dart';
-import 'package:dictionary_app/pages/home/widgets/card_words.dart';
-import 'package:dictionary_app/pages/home/widgets/custom_container.dart';
+import 'package:dictionary_app/core/widgets/card_words.dart';
+import 'package:dictionary_app/core/widgets/custom_container.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

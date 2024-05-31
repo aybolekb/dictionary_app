@@ -10,9 +10,9 @@ class InfoScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final appColor =
         theme.brightness == Brightness.dark ? DarkColor() : LightColor();
-    return Scaffold(
-      backgroundColor: appColor.backgroundColor,
-      body: SafeArea(
+    return ColoredBox(
+      color: appColor.backgroundColor,
+      child: SafeArea(
           child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         children: [
