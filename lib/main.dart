@@ -1,5 +1,5 @@
 import 'package:dictionary_app/config/theme/theme.dart';
-import 'package:dictionary_app/main_navigations/main_navigation.dart';
+
 import 'package:dictionary_app/models/words.dart';
 import 'package:dictionary_app/pages/splash/splash_screen.dart';
 import 'package:dictionary_app/provider/repository_provider.dart';
@@ -12,6 +12,8 @@ import 'package:hive_flutter/adapters.dart';
 late Box box;
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Hive.initFlutter();
 
   Hive.registerAdapter(WordsAdapter());

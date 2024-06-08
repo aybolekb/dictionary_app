@@ -12,7 +12,6 @@ class _SearchBarCustomState extends State<SearchBarCustom> {
   final TextEditingController _controller = TextEditingController();
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller.addListener(() {
       widget.onSearch(_controller.text);

@@ -19,12 +19,8 @@ class DefinitionsScreen extends StatefulWidget {
 }
 
 class _DefinitionsScreenState extends State<DefinitionsScreen> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
   String query = '';
+
   void _onSearch(String quers) {
     setState(() {
       query = quers.toLowerCase();
@@ -52,9 +48,7 @@ class _DefinitionsScreenState extends State<DefinitionsScreen> {
                   return Column(
                     children: [
                       const Gap(20),
-                      SearchBarCustom(
-                        onSearch: _onSearch,
-                      ),
+                      SearchBarCustom(onSearch: _onSearch),
                       const Gap(20),
                       _filteredItems.isEmpty && query.isNotEmpty
                           ? const Text('Tapylmady...')
